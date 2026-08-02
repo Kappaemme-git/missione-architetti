@@ -1,0 +1,32 @@
+# ---------------------------------------------------------------
+# File sorgente originali (video 4K e grafiche Instagram).
+# Restano sul tuo computer: pesano oltre 1 GB e online non servono,
+# il sito usa le versioni compresse dentro assets/.
+# La barra iniziale limita la regola alla cartella principale,
+# così assets/video e assets/img vengono comunque caricati.
+# ---------------------------------------------------------------
+/*.mp4
+/*.MP4
+/*.mov
+/*.MOV
+/*.png
+/*.PNG
+/*.jpg
+/*.JPG
+/*.jpeg
+/*.JPEG
+/*.heic
+/*.HEIC
+
+# Sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# Vercel
+.vercel

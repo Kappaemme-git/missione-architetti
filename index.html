@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Missione Architetti</title>
+<meta name="description" content="Studio di architettura e interior design ad Ascoli Piceno. Progettiamo e rinnoviamo la tua casa con soluzioni su misura — in studio e online in tutta Italia: layout, render fotorealistici, moodboard e disegni esecutivi.">
+<meta name="theme-color" content="#0D192E">
+<meta name="geo.region" content="IT-AP">
+<meta name="geo.placename" content="Ascoli Piceno">
+<meta name="author" content="Missione Architetti — Roberta Marta, Fortunato Pagano">
+<!-- Quando il dominio definitivo sarà attivo, riattivare con l'indirizzo giusto:
+     <link rel="canonical" href="https://iltuodominio.it/"> -->
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="it_IT">
+<meta property="og:site_name" content="Missione Architetti">
+<meta property="og:title" content="Missione Architetti">
+<meta property="og:description" content="Trasformiamo le tue idee in spazi che parlano di te. Progettazione d'interni su misura, ovunque tu sia.">
+<meta property="og:image" content="assets/img/duo-mission.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" type="image/png" href="assets/img/logo-icon.png">
+<link rel="apple-touch-icon" href="assets/img/logo-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Playfair+Display:wght@400;500;600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"ProfessionalService",
+  "name":"Missione Architetti",
+  "description":"Studio di architettura e interior design ad Ascoli Piceno. Progettazione d'interni su misura e ristrutturazioni, con consulenza online in tutta Italia.",
+  "image":"assets/img/duo-mission.jpg",
+  "telephone":"+393793219117",
+  "address":{
+    "@type":"PostalAddress",
+    "addressLocality":"Ascoli Piceno",
+    "addressRegion":"AP",
+    "addressCountry":"IT"
+  },
+  "areaServed":[{"@type":"City","name":"Ascoli Piceno"},{"@type":"Country","name":"Italia"}],
+  "priceRange":"$$",
+  "sameAs":["https://www.instagram.com/missionearchitetti/"],
+  "employee":[
+    {"@type":"Person","name":"Roberta Marta","jobTitle":"Architetto e Interior Designer"},
+    {"@type":"Person","name":"Fortunato Pagano","jobTitle":"Architetto"}
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- ==================== NAV ==================== -->
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a class="nav__logo" href="#top" aria-label="Missione Architetti — home">
+      <img src="assets/img/logo-icon.png" alt="">
+      <span>Missione Architetti<small>Roberta &amp; Fortunato</small></span>
+    </a>
+
+    <nav class="nav__links" id="navLinks" aria-label="Navigazione principale">
+      <a href="#chi-siamo">Chi siamo</a>
+      <a href="#metodo">Come funziona</a>
+      <a href="#servizi">Cosa ricevi</a>
+      <a href="progetti.html">Progetti</a>
+      <a href="#contatti">Contatti</a>
+      <a class="btn btn--gold" href="https://wa.me/393793219117?text=Ciao%20Missione%20Architetti%2C%20vorrei%20informazioni%20sulla%20consulenza." target="_blank" rel="noopener">Consulenza</a>
+    </nav>
+
+    <button class="nav__toggle" id="navToggle" aria-label="Apri il menu" aria-expanded="false" aria-controls="navLinks"><span></span></button>
+  </div>
+</header>
+
+<!-- ==================== HERO ==================== -->
+<section class="hero" id="top">
+  <div class="hero__media">
+    <!-- La sorgente viene assegnata da script.js dopo il load:
+         desktop -> hero.mp4 (1600px) · mobile -> hero-mobile.mp4 (960px).
+         Fino ad allora si vede il poster, quindi la pagina apre subito. -->
+    <video id="heroVideo" poster="assets/img/hero-poster.jpg"
+           data-src="assets/video/hero.mp4"
+           data-src-mobile="assets/video/hero-mobile.mp4"
+           muted loop playsinline preload="none" aria-hidden="true"></video>
+  </div>
+
+  <div class="hero__inner">
+    <img class="hero__mark reveal" src="assets/img/logo-icon.png" alt="Logo Missione Architetti" width="120" height="103">
+    <h1 class="h-display reveal" data-d="1">La tua casa, <br><span class="gold">il nostro progetto.</span></h1>
+    <p class="hero__lede reveal" data-d="2">
+      Trasformiamo le tue idee in spazi che parlano di te. <br>
+      Progettazione d'interni su misura, ovunque tu sia.
+    </p>
+    <div class="btn-row reveal" data-d="3">
+      <a class="btn btn--gold" href="https://wa.me/393793219117?text=Ciao%20Missione%20Architetti%2C%20vorrei%20prenotare%20una%20consulenza." target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.15h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.83 2.42a8.19 8.19 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23Zm4.52-6.17c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.15.16-.29.18-.53.06-.25-.13-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.44.13-.15.17-.25.25-.41.09-.17.05-.31-.01-.44-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.42l-.48-.01c-.16 0-.43.06-.66.31-.22.25-.86.85-.86 2.06 0 1.22.89 2.39 1.01 2.56.12.16 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.47-.07 1.47-.6 1.68-1.18.2-.58.2-1.08.15-1.18-.06-.11-.23-.17-.48-.29Z"/></svg>
+        Prenota una consulenza
+      </a>
+      <a class="btn btn--outline" href="progetti.html">Guarda i progetti</a>
+    </div>
+  </div>
+
+</section>
+
+<!-- ==================== PILASTRI ==================== -->
+<section class="pillars on-navy">
+  <div class="wrap">
+    <div class="pillars__grid">
+      <article class="pillar reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5V21H3z"/><path d="M9 21v-6h6v6"/></svg>
+        <div><h3>Progettiamo ogni spazio</h3><p>Dal monolocale alla villa: ogni metro quadro studiato sulle tue abitudini.</p></div>
+      </article>
+      <article class="pillar reveal" data-d="1">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M4 12V8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4"/><path d="M2 12h20v5H2z"/><path d="M5 17v3M19 17v3"/></svg>
+        <div><h3>Valorizziamo il tuo stile</h3><p>Non imponiamo un gusto: leggiamo il tuo e gli diamo una forma coerente.</p></div>
+      </article>
+      <article class="pillar reveal" data-d="2">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M20.8 5.6a5 5 0 0 0-7.1 0L12 7.3l-1.7-1.7a5 5 0 1 0-7.1 7.1l8.8 8.8 8.8-8.8a5 5 0 0 0 0-7.1Z"/></svg>
+        <div><h3>Realizziamo i tuoi desideri</h3><p>Dalla prima idea al cantiere finito, con un unico interlocutore.</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== CHI SIAMO ==================== -->
+<section class="section section--cream" id="chi-siamo">
+  <div class="wrap">
+    <div class="intro">
+      <span class="eyebrow reveal">Our mission</span>
+      <h2 class="h-section reveal" data-d="1">Trasformiamo le tue idee <br>in <span class="gold">spazi che parlano di te.</span></h2>
+      <div class="rule reveal" data-d="1"></div>
+      <p class="lede reveal" data-d="2">
+        Siamo Roberta e Fortunato, due architetti con un modo di lavorare semplice:
+        ascoltare prima di disegnare. Ogni casa che progettiamo nasce da come vivi
+        davvero i tuoi spazi, non da un catalogo.
+      </p>
+      <p class="lede reveal" data-d="3" style="margin-top:1.2rem">
+        Lo studio è ad Ascoli Piceno, ma lavoriamo anche online seguendo clienti in
+        tutta Italia con lo stesso livello di cura: consulenza, progetto esecutivo,
+        render e assistenza fino alla fine dei lavori.
+      </p>
+      <blockquote class="about__quote reveal" data-d="4">
+        Insieme, diamo forma alla casa che hai sempre sognato.
+      </blockquote>
+    </div>
+
+    <!-- Passando il mouse sulla foto (o toccandola su mobile) si apre la bio.
+         >>> SOSTITUIRE il testo dentro .member__text con le bio vere <<< -->
+    <div class="team">
+      <article class="member reveal" tabindex="0" role="button" aria-expanded="false" aria-label="Scopri chi è Roberta Marta">
+        <img src="assets/img/roberta.jpg" alt="Roberta Marta, architetto" width="900" height="931" loading="lazy">
+
+        <div class="member__body">
+          <p>Architetto · Interior Designer</p>
+          <h3>Roberta Marta</h3>
+          <span class="member__hint">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg>
+            Scopri di più
+          </span>
+        </div>
+
+        <div class="member__bio">
+          <p class="member__role">Architetto · Interior Designer</p>
+          <h3>Roberta Marta</h3>
+          <span class="member__rule"></span>
+          <div class="member__text">
+            <p>Sono Roberta, architetto interior designer e fondatore di Missione Architetti.</p>
+            <p>Il mio mondo è fatto di dettagli e di ambienti che raccontano una storia.
+            Mi occupo di trasformare gli spazi in luoghi che riflettono la personalità e
+            le esigenze di chi li vive.</p>
+            <p>Con me, ogni progetto d'interni diventa un viaggio creativo e su misura.</p>
+          </div>
+          <button class="member__close" type="button" aria-label="Chiudi">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+          </button>
+        </div>
+      </article>
+
+      <article class="member reveal" data-d="1" tabindex="0" role="button" aria-expanded="false" aria-label="Scopri chi è Fortunato Pagano">
+        <img src="assets/img/fortunato.jpg" alt="Fortunato Pagano, architetto" width="900" height="931" loading="lazy">
+
+        <div class="member__body">
+          <p>Architetto</p>
+          <h3>Fortunato Pagano</h3>
+          <span class="member__hint">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg>
+            Scopri di più
+          </span>
+        </div>
+
+        <div class="member__bio">
+          <p class="member__role">Architetto</p>
+          <h3>Fortunato Pagano</h3>
+          <span class="member__rule"></span>
+          <div class="member__text">
+            <p>Sono Fortunato, architetto e fondatore di Missione Architetti.</p>
+            <p>Il mio lavoro unisce creatività e concretezza, trasformando ogni progetto
+            in un'opera solida e funzionale.</p>
+            <p>Con me, ogni spazio è concepito per esprimere al meglio la sua identità e
+            migliorare la vita di chi lo vive.</p>
+          </div>
+          <button class="member__close" type="button" aria-label="Chiudi">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+          </button>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== COME FUNZIONA ==================== -->
+<section class="section section--navy on-navy" id="metodo">
+  <div class="wrap">
+    <div class="intro">
+      <span class="eyebrow reveal">Progetta con noi</span>
+      <h2 class="h-section reveal" data-d="1">Come <span class="gold">funziona?</span></h2>
+      <div class="rule reveal" data-d="1"></div>
+      <p class="lede reveal" data-d="2">
+        Tre passaggi, nessuna sorpresa. Sai sempre a che punto è il tuo progetto.
+      </p>
+    </div>
+
+    <div class="steps">
+      <article class="step reveal" data-d="1">
+        <div class="step__num">I</div>
+        <h3>Fissi una consulenza</h3>
+        <p>Una videochiamata per conoscerci, capire le tue esigenze, il budget e i tempi. Senza impegno.</p>
+      </article>
+      <article class="step reveal" data-d="2">
+        <div class="step__num">II</div>
+        <h3>Analizziamo il tuo ambiente</h3>
+        <p>Rilievo, misure e foto dello spazio. Studiamo luce, flussi e vincoli prima di proporre qualsiasi soluzione.</p>
+      </article>
+      <article class="step reveal" data-d="3">
+        <div class="step__num">III</div>
+        <h3>Realizziamo il progetto</h3>
+        <p>Ricevi un progetto su misura completo di disegni esecutivi, render e shopping list. Pronto da realizzare.</p>
+      </article>
+    </div>
+
+    <div class="btn-row reveal" data-d="4">
+      <a class="btn btn--gold" href="https://wa.me/393793219117?text=Ciao%2C%20vorrei%20fissare%20la%20prima%20consulenza." target="_blank" rel="noopener">
+        Fissa la prima consulenza
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== COSA RICEVI ==================== -->
+<section class="section section--tint" id="servizi">
+  <div class="wrap">
+    <div class="intro">
+      <span class="eyebrow reveal">Il progetto</span>
+      <h2 class="h-section reveal" data-d="1">Cosa <span class="gold">riceverai?</span></h2>
+      <div class="rule reveal" data-d="1"></div>
+      <p class="lede reveal" data-d="2">
+        Un pacchetto completo, non un semplice disegno. <br>
+        Tutto quello che serve a te e alle imprese, senza fraintendimenti.
+      </p>
+    </div>
+
+    <div class="deliver">
+      <div>
+        <ul class="dlist">
+          <li class="reveal">
+            <div class="dlist__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="1"/><path d="M3 11h18M11 3v18"/></svg></div>
+            <div><h3>Layout personalizzato</h3><p>Distribuzione degli spazi studiata sulle tue esigenze quotidiane.</p></div>
+          </li>
+          <li class="reveal" data-d="1">
+            <div class="dlist__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h5M8 17h8"/></svg></div>
+            <div><h3>Disegni tecnici esecutivi</h3><p>Impianto elettrico e idraulico, controsoffitti e tavole di progetto.</p></div>
+          </li>
+          <li class="reveal" data-d="2">
+            <div class="dlist__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><rect x="4" y="2" width="16" height="20" rx="1"/><path d="M12 2v20M9 11h.01M15 11h.01"/></svg></div>
+            <div><h3>Arredi su misura</h3><p>Disegni esecutivi per la realizzazione di mobili personalizzati.</p></div>
+          </li>
+          <li class="reveal" data-d="3">
+            <div class="dlist__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><circle cx="13.5" cy="6.5" r="2.5"/><circle cx="18" cy="13" r="2.5"/><circle cx="7" cy="8" r="2.5"/><path d="M12 22a9 9 0 1 1 0-18c0 2 1 3 3 3"/></svg></div>
+            <div><h3>Moodboard</h3><p>Palette colori, materiali e finiture selezionati e coordinati.</p></div>
+          </li>
+          <li class="reveal" data-d="4">
+            <div class="dlist__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><rect x="2" y="4" width="20" height="13" rx="1"/><path d="M8 21h8M12 17v4"/></svg></div>
+            <div><h3>Render fotorealistici</h3><p>Vedi il risultato finale prima ancora di iniziare i lavori.</p></div>
+          </li>
+          <li class="reveal" data-d="5">
+            <div class="dlist__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M2 3h3l2.6 12h11L21 7H6"/></svg></div>
+            <div><h3>Shopping list</h3><p>Tutti gli elementi selezionati, con dove e come acquistarli.</p></div>
+          </li>
+          <li class="reveal" data-d="6">
+            <div class="dlist__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M2 4h6a3 3 0 0 1 3 3v13a3 3 0 0 0-3-2H2zM22 4h-6a3 3 0 0 0-3 3v13a3 3 0 0 1 3-2h6z"/></svg></div>
+            <div><h3>Book finale</h3><p>Un documento completo con tutto il progetto, pronto per essere realizzato.</p></div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="deliver__media reveal">
+        <img src="assets/img/moodboard.jpg" alt="Moodboard con campioni di materiali, palette colori e disegni tecnici di progetto" width="371" height="1070" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== PROGETTI ==================== -->
+<!-- Blocco autonomo: per spostarlo su una pagina dedicata (progetti.html)
+     basta tagliare questa <section> e il CSS .pgrid/.pcard resta valido. -->
+<section class="section section--navy on-navy" id="progetti">
+  <div class="wrap">
+    <div class="intro">
+      <span class="eyebrow reveal">Progetti</span>
+      <h2 class="h-section reveal" data-d="1">Spazi che abbiamo <br><span class="gold">immaginato per primi.</span></h2>
+      <div class="rule reveal" data-d="1"></div>
+      <p class="lede reveal" data-d="2">
+        Ogni progetto nasce come render fotorealistico: vedi la tua casa finita
+        prima di spendere un euro in cantiere. <br>
+        Nella galleria trovi il video di ogni intervento e cosa abbiamo fatto.
+      </p>
+    </div>
+
+    <!-- Anteprima: le schede complete stanno in progetti.html -->
+    <div class="teaser">
+      <a class="pcard reveal" href="progetti.html" aria-label="Vedi il progetto Bagno padronale nella galleria">
+        <img src="assets/img/progetto-bagno-poster.jpg" alt="Render di un bagno padronale con boiserie scure e marmo" width="1100" height="619" loading="lazy">
+        <div class="pcard__body"><span>Render</span><h3>Bagno padronale</h3></div>
+      </a>
+
+      <a class="pcard reveal" data-d="1" href="progetti.html" aria-label="Vedi il progetto Ingresso e living nella galleria">
+        <img src="assets/img/progetto-salotto-poster.jpg" alt="Render di un ingresso con armadiatura a tutta altezza e consolle sospesa" width="640" height="1138" loading="lazy">
+        <div class="pcard__body"><span>Render</span><h3>Ingresso &amp; living</h3></div>
+      </a>
+
+      <a class="pcard reveal" data-d="2" href="progetti.html" aria-label="Vedi il progetto Cameretta su misura nella galleria">
+        <img src="assets/img/progetto-cameretta-poster.jpg" alt="Render di una cameretta con letto e boiserie su misura" width="1100" height="619" loading="lazy">
+        <div class="pcard__body"><span>Arredo su misura</span><h3>Cameretta</h3></div>
+      </a>
+    </div>
+
+    <div class="teaser__cta">
+      <a class="btn btn--text reveal" href="progetti.html">
+        <span class="line" aria-hidden="true"></span>
+        Scopri i nostri lavori
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== PERCHÉ NOI ==================== -->
+<section class="section section--navy on-navy" style="padding-top:0">
+  <div class="wrap">
+    <div class="intro">
+      <span class="eyebrow reveal">Progetta con noi</span>
+      <h2 class="h-section reveal" data-d="1">Perché scegliere <br><span class="gold">Missione Architetti?</span></h2>
+      <div class="rule reveal" data-d="1"></div>
+    </div>
+
+    <div class="why">
+      <article class="wcard reveal">
+        <div class="wcard__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.5 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.1A8.4 8.4 0 0 1 4 11.5 8.4 8.4 0 0 1 12.5 3 8.4 8.4 0 0 1 21 11.5Z"/></svg></div>
+        <h3>Supporto costante</h3>
+        <p>Una chat WhatsApp dedicata e un telefono riservato ai nostri clienti. Rispondiamo noi, non un centralino.</p>
+      </article>
+      <article class="wcard reveal" data-d="1">
+        <div class="wcard__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M11 18h2"/></svg></div>
+        <h3>Aggiornamenti quotidiani</h3>
+        <p>Ti teniamo costantemente aggiornato sull'avanzamento dei lavori, con foto e note dal cantiere.</p>
+      </article>
+      <article class="wcard reveal" data-d="2">
+        <div class="wcard__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><circle cx="17.5" cy="9" r="2.6"/><path d="M16 20a6 6 0 0 1 5.5-6"/></svg></div>
+        <h3>Condivisione di idee</h3>
+        <p>Condividiamo ogni fase del progetto, ascoltiamo le tue idee e costruiamo insieme la soluzione perfetta.</p>
+      </article>
+      <article class="wcard reveal" data-d="3">
+        <div class="wcard__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="m21 3-9 18-2.3-7.7L2 11z"/></svg></div>
+        <h3>Al tuo fianco, sempre</h3>
+        <p>Dalla prima idea alla realizzazione non sei mai solo: ti guidiamo passo dopo passo.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== CTA CONTATTI ==================== -->
+<section class="section cta" id="contatti">
+  <div class="wrap">
+    <div class="intro">
+      <span class="eyebrow reveal">Contatti</span>
+      <h2 class="h-section reveal" data-d="1">Pronto a trasformare <br><span class="gold">la tua casa?</span></h2>
+      <div class="rule reveal" data-d="1"></div>
+      <p class="lede reveal" data-d="2">
+        Raccontaci il tuo spazio e cosa vorresti cambiare. <br>
+        La prima chiacchierata è gratuita e senza impegno.
+      </p>
+    </div>
+
+    <div class="cta__methods">
+      <a class="method reveal" data-d="2" href="https://wa.me/393793219117?text=Ciao%20Missione%20Architetti%2C%20vorrei%20prenotare%20una%20consulenza." target="_blank" rel="noopener">
+        <span class="method__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.5 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.1A8.4 8.4 0 0 1 4 11.5 8.4 8.4 0 0 1 12.5 3 8.4 8.4 0 0 1 21 11.5Z"/></svg></span>
+        <small>Consulenza su WhatsApp</small>
+        <strong>+39 379 321 9117</strong>
+      </a>
+
+      <a class="method reveal" data-d="3" href="https://www.instagram.com/missionearchitetti/" target="_blank" rel="noopener">
+        <span class="method__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg></span>
+        <small>Scrivici in direct</small>
+        <strong>@missionearchitetti</strong>
+      </a>
+
+      <!-- Indirizzo completo (via e numero civico) da aggiungere quando disponibile -->
+      <a class="method reveal" data-d="4" href="https://maps.google.com/?q=Piazza+del+Popolo,+Ascoli+Piceno" target="_blank" rel="noopener">
+        <span class="method__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="2.8"/></svg></span>
+        <small>Vieni a trovarci</small>
+        <strong>Ascoli Piceno</strong>
+      </a>
+    </div>
+
+    <p class="cta__note reveal" data-d="4">
+      Riceviamo in studio su appuntamento e seguiamo progetti online in tutta Italia.
+    </p>
+
+    <p class="cta__sign reveal" data-d="4">
+      Insieme, diamo forma <br>alla casa che hai sempre sognato.
+    </p>
+  </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__top">
+      <div class="footer__logo">
+        <img src="assets/img/logo.png" alt="Missione Architetti" width="200" height="113" loading="lazy">
+        <p style="max-width:34ch">Progettazione d'interni su misura e ristrutturazioni. Studio ad Ascoli Piceno, consulenza online in tutta Italia.</p>
+      </div>
+
+      <div>
+        <h4>Naviga</h4>
+        <ul>
+          <li><a href="#chi-siamo">Chi siamo</a></li>
+          <li><a href="#metodo">Come funziona</a></li>
+          <li><a href="#servizi">Cosa ricevi</a></li>
+          <li><a href="progetti.html">Progetti</a></li>
+          <li><a href="#contatti">Contatti</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Contatti</h4>
+        <ul>
+          <li><a href="https://maps.google.com/?q=Piazza+del+Popolo,+Ascoli+Piceno" target="_blank" rel="noopener">Ascoli Piceno (AP)</a></li>
+          <li><a href="https://wa.me/393793219117" target="_blank" rel="noopener">+39 379 321 9117</a></li>
+          <li><a href="https://www.instagram.com/missionearchitetti/" target="_blank" rel="noopener">@missionearchitetti</a></li>
+          <li><a href="privacy.html">Privacy &amp; Cookie</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <p>© <span id="year">2026</span> Missione Architetti — Roberta Marta &amp; Fortunato Pagano</p>
+      <p>La tua casa, il nostro progetto.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp flottante -->
+<a class="wa" href="https://wa.me/393793219117?text=Ciao%20Missione%20Architetti%2C%20vorrei%20informazioni." target="_blank" rel="noopener" aria-label="Scrivici su WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.15h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.83 2.42a8.19 8.19 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23Zm4.52-6.17c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.15.16-.29.18-.53.06-.25-.13-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.44.13-.15.17-.25.25-.41.09-.17.05-.31-.01-.44-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.42l-.48-.01c-.16 0-.43.06-.66.31-.22.25-.86.85-.86 2.06 0 1.22.89 2.39 1.01 2.56.12.16 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.47-.07 1.47-.6 1.68-1.18.2-.58.2-1.08.15-1.18-.06-.11-.23-.17-.48-.29Z"/></svg>
+</a>
+
+<!-- Lightbox video -->
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Video progetto">
+  <button class="lb__close" id="lbClose" aria-label="Chiudi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+  <video id="lbVideo" controls playsinline></video>
+</div>
+
+<script src="assets/script.js"></script>
+</body>
+</html>
