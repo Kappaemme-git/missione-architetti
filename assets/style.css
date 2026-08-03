@@ -450,13 +450,17 @@ p,li,dd,blockquote{text-wrap:pretty}
 
 .project h2{font-size:clamp(1.7rem,1.3rem + 1.7vw,2.6rem); margin:-.45rem 0 1.1rem}
 
-/* La categoria sta sopra il video, allineata al suo bordo sinistro */
+/* La categoria sta sopra il video, allineata al suo bordo sinistro.
+   La colonna di testo viene abbassata dello stesso ingombro, così il titolo
+   parte dal bordo alto del video e non da quello dell'etichetta. */
+.project{--cat-h:calc(.7rem * 1.4 + .85rem)}
 .project__side{display:flex; flex-direction:column}
 .project__cat{
-  margin:0 0 .85rem;
+  margin:0 0 .85rem; line-height:1.4;
   font-size:.7rem; letter-spacing:.24em; text-transform:uppercase;
   color:var(--ink-mute);
 }
+.project__text{padding-top:var(--cat-h)}
 .section--navy .project__cat{color:rgba(237,234,228,.5)}
 .project__desc{font-size:1rem; line-height:1.75; color:var(--ink-soft)}
 .section--navy .project__desc{color:rgba(237,234,228,.72)}
@@ -646,6 +650,7 @@ p,li,dd,blockquote{text-wrap:pretty}
 @media (max-width:980px){
   .project{grid-template-columns:1fr; gap:2rem}
   .project:nth-child(even) .project__side{order:0}
+  .project__text{padding-top:0}   /* in colonna singola non serve compensare */
   /* su schermo stretto finirebbe sotto il testo */
   .soon__mark{display:none}
   .soon::before{inset:auto -30% -40% auto; width:80%}
