@@ -625,6 +625,16 @@ p,li,dd,blockquote{text-wrap:pretty}
   .nav__links a{font-size:1rem; letter-spacing:.14em}
   .nav__toggle{display:flex; position:relative; z-index:1}
 
+  /* Con il menu aperto va tolto il backdrop-filter: un elemento che lo usa
+     diventa il riferimento per i figli position:fixed, e il pannello si
+     accorcerebbe all'altezza della barra lasciando il resto trasparente. */
+  .nav.is-open{background:transparent; backdrop-filter:none; box-shadow:none}
+  .nav.is-open::after{opacity:0}
+
+  /* Il logo si vede già nella barra: nell'hero sarebbe un doppione */
+  .hero__mark{display:none}
+  .hero h1{margin-top:0}
+
   .about__grid{grid-template-columns:1fr}
   .cta__methods{grid-auto-flow:row; grid-auto-columns:auto}
   .method{padding-right:0}
