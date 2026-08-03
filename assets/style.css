@@ -487,7 +487,9 @@ p,li,dd,blockquote{text-wrap:pretty}
   font-size:clamp(1.9rem,1.4rem + 2.1vw,3rem);
   margin-bottom:1.3rem;
 }
-.soon p{color:rgba(237,234,228,.7); max-width:48ch; margin-bottom:2.2rem}
+.soon p{color:rgba(237,234,228,.7); max-width:52ch}
+.soon p + p{margin-top:1rem}
+.soon .btn{margin-top:2.2rem}
 .soon .btn{color:var(--gold)}
 .soon .btn:hover{color:var(--gold-light)}
 
