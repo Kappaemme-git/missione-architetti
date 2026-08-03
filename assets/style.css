@@ -89,7 +89,6 @@ ul{list-style:none; padding:0}
   font-size:clamp(1.1rem, 1rem + .45vw, 1.35rem);
   line-height:1.7;
 }
-.intro .about__quote{max-width:56ch}
 
 h1,h2,h3,h4{font-family:var(--display); font-weight:500; line-height:1.08; letter-spacing:-.01em}
 
@@ -114,6 +113,8 @@ h1,h2,h3,h4{font-family:var(--display); font-weight:500; line-height:1.08; lette
 
 .gold{color:var(--gold)}
 .on-navy .gold{color:var(--gold-light)}
+/* Il giallo del logo: solo su fondo scuro, dove ha contrasto */
+.yellow{color:var(--yellow)}
 em.soft{font-style:italic; font-family:var(--serif); font-weight:400}
 
 /* text-wrap:pretty impedisce che l'ultima riga resti con una parola sola */
@@ -249,19 +250,16 @@ p,li,dd,blockquote{text-wrap:pretty}
 .pillar{padding:1.6rem clamp(1rem,2.6vw,2.4rem); display:flex; gap:1.1rem; align-items:flex-start}
 .pillar + .pillar{border-left:1px solid var(--navy-line)}
 .pillar svg{width:30px; height:30px; flex:none; color:var(--gold); stroke-width:1.15}
-.pillar h3{font-family:var(--sans); font-size:.78rem; font-weight:500; letter-spacing:.17em; text-transform:uppercase; color:var(--cream); margin-bottom:.45rem}
+.pillar h3{
+  font-family:var(--sans); font-size:.78rem; font-weight:500;
+  letter-spacing:.17em; text-transform:uppercase; color:var(--cream);
+  line-height:1.4; margin-bottom:.7rem;
+}
 .pillar p{font-size:.92rem; line-height:1.6; color:rgba(237,234,228,.62)}
 
 /* ==========================================================================
    CHI SIAMO
    ========================================================================== */
-.about__quote{
-  margin-top:2.4rem; padding-left:1.5rem; border-left:2px solid var(--gold);
-  font-family:var(--serif); font-style:italic;
-  font-size:clamp(1.15rem,1.05rem + .5vw,1.5rem); line-height:1.5; color:var(--ink);
-  max-width:34ch;
-}
-.section--navy .about__quote{color:var(--cream)}
 
 /* Team */
 .team{display:grid; grid-template-columns:repeat(2,1fr); gap:clamp(1.4rem,3vw,2.6rem); margin-top:clamp(3.5rem,7vw,5.5rem)}
@@ -575,13 +573,6 @@ p,li,dd,blockquote{text-wrap:pretty}
 .method small{font-size:.7rem; letter-spacing:.22em; text-transform:uppercase; color:var(--ink-mute); margin-top:.35rem}
 .method strong{font-family:var(--display); font-size:clamp(1.15rem,1rem + .5vw,1.5rem); font-weight:500; color:var(--navy); margin-top:-.35rem}
 .cta__note{margin-top:2.2rem; font-size:.88rem; color:var(--ink-mute); max-width:46ch}
-.cta__sign{
-  margin-top:clamp(2.6rem,5vw,3.6rem);
-  padding-left:1.5rem; border-left:2px solid var(--gold);
-  font-family:var(--serif); font-style:italic;
-  font-size:clamp(1.1rem,1rem + .55vw,1.5rem); line-height:1.5; color:var(--gold);
-  max-width:34ch;
-}
 
 /* ==========================================================================
    FOOTER
@@ -634,7 +625,6 @@ p,li,dd,blockquote{text-wrap:pretty}
   .nav__toggle{display:flex; position:relative; z-index:1}
 
   .about__grid,.deliver{grid-template-columns:1fr}
-  .about__quote{max-width:none}
   .cta__methods{grid-template-columns:1fr}
   .method{padding-right:0}
   .method + .method{border-left:0; border-top:1px solid rgba(13,25,46,.14); padding-left:0}
