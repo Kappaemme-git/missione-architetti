@@ -435,7 +435,7 @@ p,li,dd,blockquote{text-wrap:pretty}
 
 /* Colonne uguali: così il video ha la stessa larghezza sia a sinistra che a destra */
 .project{display:grid; grid-template-columns:1fr 1fr; gap:clamp(2rem,5vw,4.5rem); align-items:start}
-.project:nth-child(even) .project__media{order:2}
+.project:nth-child(even) .project__side{order:2}
 
 .project__media{
   position:relative; overflow:hidden; border-radius:var(--radius);
@@ -445,19 +445,17 @@ p,li,dd,blockquote{text-wrap:pretty}
 .project__media:hover video,.project__media:hover img{transform:scale(1.035)}
 /* Stessa proporzione per tutti i video: la sequenza scorre regolare */
 .project__media video,.project__media img{aspect-ratio:4/3}
-.project__media::after{background:linear-gradient(to top, rgba(8,17,31,.72), rgba(8,17,31,.1) 34%, transparent 55%)}
+.project__media::after{background:linear-gradient(to top, rgba(8,17,31,.22), transparent 40%)}
 .project__media .pcard__play{opacity:1}
 
-/* Il margine negativo compensa lo spazio vuoto sopra le maiuscole, così la
-   prima riga del titolo parte esattamente dal bordo alto del video. */
-.project h2{font-size:clamp(1.7rem,1.3rem + 1.7vw,2.6rem); margin:-.5rem 0 1.1rem}
+.project h2{font-size:clamp(1.7rem,1.3rem + 1.7vw,2.6rem); margin:-.45rem 0 1.1rem}
 
-/* La categoria vive sopra il video, in basso a sinistra */
+/* La categoria sta sopra il video, allineata al suo bordo sinistro */
+.project__side{display:flex; flex-direction:column}
 .project__cat{
-  position:absolute; z-index:2; margin:0;
-  left:clamp(1rem,2.4vw,1.7rem); bottom:clamp(.9rem,2vw,1.4rem);
-  font-size:.68rem; letter-spacing:.24em; text-transform:uppercase;
-  color:var(--gold-light); pointer-events:none;
+  margin:0 0 .85rem;
+  font-size:.7rem; letter-spacing:.24em; text-transform:uppercase;
+  color:var(--ink-mute);
 }
 .section--navy .project__cat{color:rgba(237,234,228,.5)}
 .project__desc{font-size:1rem; line-height:1.75; color:var(--ink-soft)}
@@ -647,7 +645,7 @@ p,li,dd,blockquote{text-wrap:pretty}
 
 @media (max-width:980px){
   .project{grid-template-columns:1fr; gap:2rem}
-  .project:nth-child(even) .project__media{order:0}
+  .project:nth-child(even) .project__side{order:0}
   /* su schermo stretto finirebbe sotto il testo */
   .soon__mark{display:none}
   .soon::before{inset:auto -30% -40% auto; width:80%}
