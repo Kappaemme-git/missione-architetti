@@ -573,7 +573,7 @@ p,li,dd,blockquote{text-wrap:pretty}
 .method:hover strong{color:var(--gold)}
 .method__ico svg{width:26px; height:26px; stroke-width:1.3}
 .method small{font-size:.7rem; letter-spacing:.22em; text-transform:uppercase; color:var(--ink-mute); margin-top:.35rem}
-.method strong{font-family:var(--display); font-size:clamp(1.15rem,1rem + .5vw,1.5rem); font-weight:500; color:var(--navy); margin-top:-.35rem}
+.method strong{font-family:var(--display); font-size:clamp(1.15rem,1rem + .5vw,1.5rem); font-weight:500; color:var(--navy); margin-top:-.35rem; overflow-wrap:anywhere}
 
 /* ==========================================================================
    FOOTER
