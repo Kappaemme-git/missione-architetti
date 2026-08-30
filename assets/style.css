@@ -452,6 +452,7 @@ p,li,dd,blockquote{text-wrap:pretty}
   display:grid; grid-template-columns:repeat(3,minmax(0,1fr));
   gap:clamp(.45rem,1vw,.75rem); margin-top:clamp(.45rem,1vw,.75rem);
 }
+.project__gallery--two{grid-template-columns:repeat(2,minmax(0,1fr))}
 .project__shot{
   position:relative; overflow:hidden; border-radius:var(--radius);
   background:var(--navy-soft);
