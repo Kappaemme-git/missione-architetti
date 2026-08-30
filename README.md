@@ -43,7 +43,7 @@ Ogni push sul ramo `main` aggiorna il sito online.
 
 - [ ] Riattivare i tag `canonical` in `index.html` e `progetti.html` con il dominio definitivo
 - [ ] Aggiungere la sitemap in `robots.txt`
-- [ ] Inserire ragione sociale, P.IVA e sede in `privacy.html`
+- [ ] Inserire ragione sociale e sede in `privacy.html`
 - [ ] Rivedere con Roberta e Fortunato le descrizioni dei progetti in `progetti.html`
 - [ ] Aggiungere via e numero civico ai contatti
 
