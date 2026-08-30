@@ -448,6 +448,21 @@ p,li,dd,blockquote{text-wrap:pretty}
 .project__media::after{background:linear-gradient(to top, rgba(8,17,31,.22), transparent 40%)}
 .project__media .pcard__play{opacity:1}
 
+.project__gallery{
+  display:grid; grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:clamp(.45rem,1vw,.75rem); margin-top:clamp(.45rem,1vw,.75rem);
+}
+.project__shot{
+  position:relative; overflow:hidden; border-radius:var(--radius);
+  background:var(--navy-soft);
+}
+.project__shot img{
+  width:100%; aspect-ratio:4/3; object-fit:cover;
+  transition:transform .65s var(--ease), filter .45s var(--ease);
+}
+.project__shot:hover img{transform:scale(1.045); filter:brightness(.88)}
+.project__shot:focus-visible{outline:2px solid var(--gold); outline-offset:3px}
+
 .project h2{font-size:clamp(1.7rem,1.3rem + 1.7vw,2.6rem); margin:-.45rem 0 1.1rem}
 
 /* La categoria sta sopra il video, allineata al suo bordo sinistro.
@@ -508,7 +523,9 @@ p,li,dd,blockquote{text-wrap:pretty}
   padding:clamp(1rem,4vw,3rem);
 }
 .lb.is-open{opacity:1; visibility:visible}
-.lb video{max-width:min(100%,900px); max-height:86svh; width:auto; border-radius:var(--radius)}
+.lb video,.lb > img{max-width:min(100%,1100px); max-height:86svh; width:auto; border-radius:var(--radius)}
+.lb > img{height:auto; object-fit:contain}
+.lb video[hidden],.lb > img[hidden]{display:none}
 .lb__close{
   position:absolute; top:clamp(1rem,3vw,2rem); right:clamp(1rem,3vw,2rem);
   width:46px; height:46px; border-radius:50%; display:grid; place-items:center;

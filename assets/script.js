@@ -132,11 +132,18 @@
   /* ---------- Lightbox ---------- */
   var lb = document.getElementById('lb');
   var lbVideo = document.getElementById('lbVideo');
+  var lbImage = document.getElementById('lbImage');
   var lbClose = document.getElementById('lbClose');
   var lastFocus = null;
 
-  var openLb = function (src) {
+  var openVideo = function (src) {
     lastFocus = document.activeElement;
+    if (lbImage) {
+      lbImage.hidden = true;
+      lbImage.removeAttribute('src');
+      lbImage.alt = '';
+    }
+    lbVideo.hidden = false;
     lbVideo.src = src;
     lb.classList.add('is-open');
     document.body.style.overflow = 'hidden';
@@ -144,20 +151,48 @@
     lbClose.focus();
   };
 
+  var openImage = function (src, alt) {
+    if (!lbImage) return;
+    lastFocus = document.activeElement;
+    lbVideo.pause();
+    lbVideo.hidden = true;
+    lbImage.src = src;
+    lbImage.alt = alt || '';
+    lbImage.hidden = false;
+    lb.classList.add('is-open');
+    document.body.style.overflow = 'hidden';
+    lbClose.focus();
+  };
+
   var closeLb = function () {
     lb.classList.remove('is-open');
     lbVideo.pause();
     document.body.style.overflow = '';
-    setTimeout(function () { lbVideo.removeAttribute('src'); lbVideo.load(); }, 400);
+    setTimeout(function () {
+      lbVideo.removeAttribute('src');
+      lbVideo.load();
+      lbVideo.hidden = false;
+      if (lbImage) {
+        lbImage.hidden = true;
+        lbImage.removeAttribute('src');
+        lbImage.alt = '';
+      }
+    }, 400);
     if (lastFocus) lastFocus.focus();
   };
 
   cards.forEach(function (card) {
     var src = card.getAttribute('data-video');
     if (!src || !lb) return;
-    card.addEventListener('click', function () { openLb(src); });
+    card.addEventListener('click', function () { openVideo(src); });
     card.addEventListener('keydown', function (e) {
-      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openLb(src); }
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openVideo(src); }
+    });
+  });
+
+  document.querySelectorAll('.project__shot[data-image]').forEach(function (shot) {
+    shot.addEventListener('click', function () {
+      openImage(shot.getAttribute('data-image'), shot.getAttribute('data-alt'));
     });
   });
 
