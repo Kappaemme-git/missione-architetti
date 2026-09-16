@@ -604,6 +604,12 @@ p,li,dd,blockquote{text-wrap:pretty}
 .footer a{transition:color .3s var(--ease)}
 .footer a:hover{color:var(--cream)}
 .footer__bottom{display:flex; flex-wrap:wrap; justify-content:space-between; gap:1rem; padding-top:1.8rem; font-size:.78rem; color:rgba(237,234,228,.42)}
+.footer__credit{display:flex; align-items:center; justify-content:flex-end; flex-wrap:wrap; gap:.45rem; margin-top:1rem; font-size:.68rem; letter-spacing:.025em; color:rgba(237,234,228,.36)}
+.footer__credit-links{display:inline-flex; align-items:center; gap:.2rem; margin-left:.15rem}
+.footer__credit-links a{width:24px; height:24px; display:grid; place-items:center; color:rgba(237,234,228,.52)}
+.footer__credit-links a:hover,.footer__credit-links a:focus-visible{color:var(--gold-light)}
+.footer__credit-links a:focus-visible{outline:1px solid var(--gold); outline-offset:2px}
+.footer__credit-links svg{width:13px; height:13px; fill:currentColor}
 
 /* WhatsApp flottante */
 .wa{
