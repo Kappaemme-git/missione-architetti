@@ -1,0 +1,11 @@
+# Original source media stored at the repository root; the optimized site assets
+# are in assets/ and remain part of the deployment.
+/*.mp4
+/*.png
+/*.PNG
+/*.jpg
+/*.JPG
+/*.jpeg
+/*.JPEG
+/.DS_Store
+/.env*
